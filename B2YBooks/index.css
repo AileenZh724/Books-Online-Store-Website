@@ -1,0 +1,197 @@
+﻿/* general text formatting */
+
+h1, h2, h3, nav, footer {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+body {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 80%;
+}
+
+div#searchBox, div#listBox {
+   margin: 0.25em auto;
+   background-color: #EBF4FB;
+   padding: 1em;
+   border: 1pt solid #95BEF0;
+   width: 80%;
+}
+div#searchBox { margin-top: 1em; }
+div#listBox { 
+   margin-top: 1em; 
+   background-color: #FAFCFF;
+   }
+
+table {
+   border: collapse; 
+   border-spacing: 0;
+   
+}
+
+table tbody td{
+   border-top: 1pt solid #95BEF0;   
+   line-height: 1.5em;
+   vertical-align: middle;
+   padding: 0.5em 0.75em;
+}
+table thead th {
+   text-align: left;
+   padding: 0.25em 0.75em; 
+}
+table thead {
+   background-color: #EBF4FB ;
+}
+
+table tbody td:first-child  {
+   text-align: center;
+   padding: 0.5em 0em;   
+}
+
+caption {
+   background-color: #95BEF0;
+      padding: 0.5em 0.5em; 
+      font-weight: bold;
+      font-size: 1.2em;
+}
+
+#searchBox {
+   display: flex;
+   align-items: center; 
+   gap: 10px;  
+   padding: 10px;
+   background-color: #EBF4FB;
+   border: 1px solid #95BEF0;
+   width: 80%;
+   margin: 0 auto;
+}
+
+#cartContainer {
+   margin-left: auto;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+#cartIcon {
+   width: 20px;
+   height: auto;
+   cursor: pointer;
+}
+
+.bookCover {
+   width: 80px;  
+   height: auto;  
+ }
+
+ .bookTitle {
+   font-style: italic;
+ }
+ 
+
+ .stars {
+   white-space: nowrap;
+   display: inline-block;
+ }
+/* set up the cart info */
+ #cartDetails {
+   width: 80%;
+   margin: 1em auto;
+   background-color: #f9f9f9;
+   border: 1px solid #ccc;
+   padding: 1em;
+   font-size: 0.9em;
+ }
+/* set up the style for pop up */
+ #quantityPopup {
+   position: fixed;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ #popupContent {
+   background: white;
+   padding: 20px;
+   border-radius: 6px;
+   box-shadow: 0 0 10px gray;
+ }
+ /* ============================================================================ */
+/* ==========================DARK MODE========================================== */
+body.dark-mode {
+   background-color: #121212;
+   color: #f0f0f0;
+ }
+ 
+ /* Header Bar */
+ body.dark-mode #topBar {
+   background-color: #1e1e1e;
+   border-bottom: 1px solid #444;
+ }
+
+ /* cart icon */
+body.dark-mode #cartIcon {
+   border: solid 1px #999999;
+   background-color: #9FAAB0;
+}
+
+ /* Search + Cart Box */
+ body.dark-mode #searchBox {
+   background-color: #1f1f1f;
+   border-color: #444;
+ }
+ 
+ body.dark-mode #listBox {
+   background-color: #1c1c1c;
+   border-color: #444;
+ }
+ body.dark-mode caption {
+   background-color: #9FAAB0;
+      padding: 0.5em 0.5em; 
+      font-weight: bold;
+      font-size: 1.2em;
+}
+ /* Cart Detail Section */
+ body.dark-mode #cartDetails {
+   background-color: #1e1e1e;
+   border: 1px solid #444;
+   color: #f0f0f0;
+ }
+ 
+ /* Quantity popup for dark mode*/
+ body.dark-mode #popupContent {
+   background-color: #292929;
+   color: #f0f0f0;
+   border: 1px solid #555;
+ }
+ 
+ /* Table headers and rows for dark mode*/
+ body.dark-mode table thead {
+   background-color: #2a2a2a;
+   color: #f0f0f0;
+ }
+ 
+ body.dark-mode table tbody td {
+   border-top: 1px solid #444;
+ }
+ 
+ /* Input, select, button styles for darck mode */
+ body.dark-mode input,
+ body.dark-mode select,
+ body.dark-mode button {
+   background-color: #333;
+   color: #f0f0f0;
+   border: 1px solid #666;
+ }
+ 
+ body.dark-mode input[type="checkbox"] {
+   accent-color: #999;
+ }
+ 
+/* highlight, color is light pink on default, or grey pink for dark mode*/
+.highlighted {
+  background-color: #ffdfe8;
+}
+
+body.dark-mode .highlighted {
+  background-color: #8b6d6d !important;
+}

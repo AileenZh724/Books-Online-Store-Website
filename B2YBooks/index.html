@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>COMP5347 Assignment One</title>
+   <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>B2YBooks online store</h1>
+    <!-- add dark mode button ref:https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp-->
+    <div id="topBar">
+        <button type="button" id="dark-mode"> 🌙 Dark Mode</button>
+      </div>
+<!-- add search bar and filter bar -->
+   <form id="searchForm">
+      <div id="searchBox">
+          <input type="text" id="searchInput">
+          <button type="button" id="searchBtn">search</button>
+  
+          <select id="categoryFilter">
+              <option value="Category">Category</option>
+              <option value="Art">Art</option>
+              <option value="Science History">Science History</option>
+              <option value="Action and Adventure">Action and Adventure</option>
+              <option value="Health">Health</option>
+              <option value="Science Fiction">Science Fiction</option>
+              <!-- <option value="Unknown Category">Unknown Category</option> -->
+          </select>
+          <button type="button" id="filterBtn">Filter</button>
+  
+          <div id="cartContainer">
+              <button type="button" id="addToCartBtn">Add to Cart</button>
+              <button type="button" id="resetCartBtn">Reset the Cart</button>
+              <img src="images/shopping_cart.png" alt="Shopping Cart" id="cartIcon" />
+              <span id="cartCount">(0)</span>
+          </div>
+      </div>
+  </form>
+<!-- set up book list -->
+   <div id="listBox">
+        <table id="bookTable">
+            <caption>&nbsp;</caption>
+            <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Title</th>
+                <th></th>
+                <th>Authors</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Publisher</th>
+                <th>Category</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+      
+   </div>
+<!-- set up cart details -->
+   <div id="cartDetails" style="display:none;">
+    <h3>Cart Details</h3>
+    <table id="cartTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p>Total Price: <span id="totalPrice">$0</span></p>
+    <button id="closeCart">Close</button>
+  </div>
+  
+<!-- set up the pop up when user add item to the cart -->
+  <div id="quantityPopup" style="display:none;">
+    <div id="popupContent">
+      <p id="popupTitle">Enter quantity:</p>
+      <input type="number" id="popupInput" min="1" value="1">
+      <button id="popupConfirm">OK</button>
+      <button id="popupCancel">Cancel</button>
+    </div>
+  </div>
+  
+   <script src="script.js"></script>
+</body>
+</html>
